@@ -15,7 +15,7 @@ git clone git@github.com:liyinchigithub/express-mysql-restfulAPI.git
 2、切换到目录下
 
 ```cmd
-cd express-mysql-restfulAPI
+cd Omysql
 
 ```
 
