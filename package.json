@@ -1,0 +1,25 @@
+{
+  "name": "express-emysql-restfulapi",
+  "version": "1.0.0",
+  "description": "Using HTTP requests to realize mysql database operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "mongoDB",
+    "http",
+    "https",
+    "API",
+    "restful",
+    "postman"
+  ],
+  "author": "liyinchi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}

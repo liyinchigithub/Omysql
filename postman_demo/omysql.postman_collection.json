@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "6d1ecb1b-bd02-41ff-854a-a62240e4d0c0",
+		"name": "omysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "创建数据库",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"query\":\"CREATE DATABASE 数据库名称;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/CreateDB/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"CreateDB",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "创建表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"query\":\"CREATE TABLE table4(name VARCHAR(100),id VARCHAR(100),age INT,address VARCHAR(100),tel INT,PRIMARY KEY ( id ))ENGINE=InnoDB DEFAULT CHARSET=utf8;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/CreateTable/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"CreateTable",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "插入数据",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7e5b2dc8-46c0-428b-a118-67ddb634df5d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"addSql\":\"INSERT INTO table4(address,age,id,name,tel) VALUES('福建省泉州市丰泽区',19,225,'刘丽丽','159115');\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/insert_data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"insert_data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新数据",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7e5b2dc8-46c0-428b-a118-67ddb634df5d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"port\":\"3306\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"database\":\"数据库名称\",\n\t\"UpdateSql\":\"UPDATE xxx SET modify_time ='2019-03-30T21:53:57.000Z' WHERE operate_id IN (SELECT id FROM xxx WHERE order_num = 'xxx2019073100012')\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除表数据",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7e5b2dc8-46c0-428b-a118-67ddb634df5d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"delSql\":\"DELETE FROM table4 where name='李武';\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/delete/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除表",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"DropSql\":\"DROP TABLE table4;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/drop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"drop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除数据库",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"DropSql\":\"DROP DATABASE Express_API_DB;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/drop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"drop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询条件",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0858922e-e6b3-47f8-ac5d-92aac24b7d66",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"console.log(\"个数：\"+data.length);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"findSql\":\"SELECT * FROM table4;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/find",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询表内所有数据",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"findSql\":\"SELECT * FROM table4;\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/find",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询所有数据库",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"port\":\"3306\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"findSql\":\"show databases\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/show_databases",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"show_databases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询数据库所有的表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"port\":\"3306\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"database\":\"数据库名称\",\n\t\"findSql\":\"show tables\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/mysql_demo/show_tables",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"mysql_demo",
+						"show_tables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录账号密码检查",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"user\":\"root\",\n\t\"password\":\"12345678\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"CheckUser\":\"SELECT * FROM `User` where `username`='admin' and `password`='123456'\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8005/isLogin/CheckUser/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8005",
+					"path": [
+						"isLogin",
+						"CheckUser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取数据库字段、类型、长度、注释、是否为空",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"10.104.50.41\",\n\t\"user\":\"fcarcmtdcms_w\",\n\t\"password\":\"EyFbCNd3F4EJT4Gs\",\n\t\"port\":\"3306\",\n\t\"database\":\"数据库名称\",\n\t\"findSql\":\"show COLUMNs from t_dcms_bill;\"\n}"
+				},
+				"url": {
+					"raw": "http://10.104.113.228:8014/mysql_demo/find",
+					"protocol": "http",
+					"host": [
+						"10",
+						"104",
+						"113",
+						"228"
+					],
+					"port": "8014",
+					"path": [
+						"mysql_demo",
+						"find"
+					]
+				},
+				"description": "\n\n"
+			},
+			"response": []
+		}
+	]
+}
