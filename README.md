@@ -31,7 +31,7 @@ npm install
 4、启动omysql服务
 
 ```
-npm server.js
+node server.js
 ```
 
 5、如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：
