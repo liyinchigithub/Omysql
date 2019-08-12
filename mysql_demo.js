@@ -156,7 +156,7 @@ router.put("/insert_data", function (req, res, next) {
         }else{
             console.log('--------------------------INSERT----------------------------');
             //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('INSERT:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         }
@@ -191,12 +191,12 @@ router.delete("/delete", function (req, res, next) {
     connection.query(delSql, function (err, result) {
         //当发生错误时，响应body显示错误信息
         if (err) {
-            console.log('[INSERT ERROR] - ', err.message);
-            res.send('[INSERT ERROR] - '+ err.message);
+            console.log('[DELETE ERROR] - ', err.message);
+            res.send('[DELETE ERROR] - '+ err.message);
         }else{
-            console.log('--------------------------INSERT----------------------------');
-            //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('--------------------------DELETE----------------------------');
+            //console.log('DELETE ID:',result.insertId);
+            console.log('DELETE:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         } 
@@ -231,12 +231,12 @@ router.delete("/drop", function (req, res, next) {
     connection.query(DropSql, function (err, result) {
         //当发生错误时，响应body显示错误信息
         if (err) {
-            console.log('[INSERT ERROR] - ', err.message);
-            res.send('[INSERT ERROR] - '+ err.message);
+            console.log('[DROP ERROR] - ', err.message);
+            res.send('[DROP ERROR] - '+ err.message);
         }else{
-            console.log('--------------------------INSERT----------------------------');
-            //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('--------------------------DROP----------------------------');
+            //console.log('DROP ID:',result.insertId);
+            console.log('DROP:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         } 
@@ -270,12 +270,12 @@ router.post("/show_databases", function (req, res, next) {
     connection.query(Sql, function (err, result) {
         //当发生错误时，响应body显示错误信息
         if (err) {
-            console.log('[INSERT ERROR] - ', err.message);
-            res.send('[INSERT ERROR] - '+err.message);
+            console.log('[SHOW DATABASE ERROR] - ', err.message);
+            res.send('[[SHOW DATABASE ERROR] - '+err.message);
         }else{
-            console.log('--------------------------INSERT----------------------------');
-            //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('--------------------------SHOW DATABASE ----------------------------');
+            //console.log('[SHOW DATABASE  ID:',result.insertId);
+            console.log('[SHOW DATABASE:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         }   
@@ -309,13 +309,13 @@ router.post("/show_tables", function (req, res, next) {
     connection.query(Sql, function (err, result) {
         //当发生错误时，响应body显示错误信息
         if (err) {
-            console.log('[INSERT ERROR] - ', err.message);
+            console.log('[SHOW TABLES ERROR] - ', err.message);
             res.send('[INSERT ERROR] - '+err.message);
         }else{
             //否则
-            console.log('--------------------------INSERT----------------------------');
-            //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('--------------------------SHOW TABLES----------------------------');
+            //console.log('SHOW TABLES:',result.insertId);
+            console.log('SHOW TABLES:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         }
@@ -349,12 +349,12 @@ router.put("/update", function (req, res, next) {
     connection.query(UpdateSql, function (err, result) {
         //当发生错误时，响应body显示错误信息
         if (err) {
-            console.log('[INSERT ERROR] - ', err.message);
-            res.send('[INSERT ERROR] - '+ err.message);
+            console.log('[UPDATE ERROR] - ', err.message);
+            res.send('[UPDATE ERROR] - '+ err.message);
         }else{
-            console.log('--------------------------INSERT----------------------------');
-            //console.log('INSERT ID:',result.insertId);        
-            console.log('INSERT ID:', result);
+            console.log('--------------------------UPDATE----------------------------');
+            //console.log('UPDATE:',result.insertId);
+            console.log('UPDATE:', result);
             res.send(result);
             console.log('-----------------------------------------------------------------\n\n');
         } 
