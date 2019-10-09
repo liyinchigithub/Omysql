@@ -269,3 +269,6 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 }
 ```
 
+工具发表于“软件测试君”公众号，谢谢博主同学提供发布渠道。
+地址链接：https://mp.weixin.qq.com/s/lIuBsCEsgry20aLkTlQvng
+
