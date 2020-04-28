@@ -1,5 +1,5 @@
 {
-  "name": "express-emysql-restfulapi",
+  "name": "omysql",
   "version": "1.0.0",
   "description": "Using HTTP requests to realize mysql database operation",
   "main": "index.js",
