@@ -2,14 +2,20 @@
 
  ![img](omysql.jpg)
 
-###使用方式
+
+# 环境要求
+
+nodejs >8.X
+
+
+# 使用方式
 
 如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：
 
 1、从github拉取工程
 
 ```cmd
-git clone git@github.com:liyinchigithub/express-mysql-restfulAPI.git
+git clone git@github.com:liyinchigithub/Omysql.git
 ```
 
 2、切换到目录下
@@ -45,9 +51,9 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 
 
-##API接口文档
+## API接口文档
 
-###中文
+### 中文
 
 1. 功能   创建数据库
 
