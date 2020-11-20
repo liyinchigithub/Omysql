@@ -1,4 +1,8 @@
+# Omysql
+
 【服务诞生原因】目前团队测试、开发使用postman进行接口调试，但postman自身未提供操作数据库的功能，为方便测试人员使用postman，进行接口自动化测试时，可以直接请求操作数据库。网上使用比较多的是xmysql，但xmysql并不完美，当你在启用xmysql时，需要固定环境、账号、密码，特别是切换环境及其不方便，并且一旦接口地址外泄，对测试环境数据库有很大影响。由此诞生omysql（o表示正确）
+
+recommend: [China-Gitee](https://gitee.com/liyinchi/Omysql)，[Other-Github](https://github.com/liyinchigithub/Omysql)
 
  ![img](static/image/demo.jpg)
 
