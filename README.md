@@ -9,8 +9,16 @@ recommend: [China-Gitee](https://gitee.com/liyinchi/Omysql)，[Other-Github](htt
 
 # 环境要求
 
-nodejs >8.X
+## Nodejs
 
+1.如果你电脑还未安装配置nodejs环境，请参考：https://www.runoob.com/nodejs/nodejs-install-setup.html
+
+* 使用版本(建议):v8.0.x ~ v12.13.0 （小于v15.0）
+
+* [Nodejs下载地址] https://npm.taobao.org/mirrors/node/v12.13.0/
+
+
+2.如果你已安装配置Nodejs环境，可跳过此步骤
 
 # 使用方式
 
