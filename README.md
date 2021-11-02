@@ -7,59 +7,31 @@ recommend: [China-Gitee](https://gitee.com/liyinchi/Omysql)，[Other-Github](htt
  ![img](static/image/demo.jpg)
 
 
-# 环境要求
+# 安装
 
-## Nodejs
+## Docker方式
 
-1.如果你电脑还未安装配置nodejs环境，请参考：https://www.runoob.com/nodejs/nodejs-install-setup.html
+1.安装docker
 
-* 使用版本(建议):v8.0.x ~ v12.13.0 （小于v15.0）
+[安装docker](https://www.runoob.com/docker/centos-docker-install.html)
 
-* [Nodejs下载地址] https://npm.taobao.org/mirrors/node/v12.13.0/
+2.拉取omysql镜像
 
-
-2.如果你已安装配置Nodejs环境，可跳过此步骤
-
-# 使用方式
-
-如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：
-
-1、从github拉取工程
-
-```cmd
-git clone git@github.com:liyinchigithub/Omysql.git
+```shell
+docker pull liyinchi/omysql:latest
 ```
+![Uploading image.png…]()
 
-2、切换到目录下
+3.启动镜像容器
 
-```cmd
-cd Omysql
-
+```shell
+docker run -d --name omysql-server -p 8005:8005 liyinchi/omysql
 ```
+![Uploading image.png…]()
 
+4.访问服务接口
 
-3、安装依赖包
-
-```
-npm install
-
-```
-
-
-4、启动omysql服务
-
-```
-node server.js
-```
-
-5、如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：
-
-windows
-https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html
-
-mac
-https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
-
+http://127.0.0.1:8005
 
 
 
@@ -71,7 +43,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/CreateDB/
+请求地址：http://127.0.0.1:8005/mysql_demo/CreateDB/
 
 请求body：
 
@@ -98,7 +70,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/CreateTable/
+请求地址：http://127.0.0.1:8005/mysql_demo/CreateTable/
 
 请求body：
 
@@ -126,7 +98,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：PUT
 
-请求地址：http://127.0.0.1:8004/mysql_demo/insert_data/
+请求地址：http://127.0.0.1:8005/mysql_demo/insert_data/
 
 请求body：
 
@@ -145,7 +117,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：PUT
 
-请求地址：http://127.0.0.1:8004/mysql_demo/update/
+请求地址：http://127.0.0.1:8005/mysql_demo/update/
 
 请求body：
 ```cmd
@@ -163,7 +135,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：DELETE
 
-请求地址：http://127.0.0.1:8004/mysql_demo/delete/
+请求地址：http://127.0.0.1:8005/mysql_demo/delete/
 
 请求body：
 ```cmd
@@ -181,7 +153,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：DELETE
 
-请求地址：http://127.0.0.1:8004/mysql_demo/drop
+请求地址：http://127.0.0.1:8005/mysql_demo/drop
 
 请求body：
 ```cmd
@@ -200,7 +172,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：DELETE
 
-请求地址：http://127.0.0.1:8004/mysql_demo/drop
+请求地址：http://127.0.0.1:8005/mysql_demo/drop
 
 请求body：
 ```cmd
@@ -218,7 +190,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/find
+请求地址：http://127.0.0.1:8005/mysql_demo/find
 
 请求body：
 ```cmd
@@ -236,7 +208,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/find
+请求地址：http://127.0.0.1:8005/mysql_demo/find
 
 请求body：
 ```cmd
@@ -254,7 +226,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/show_databases
+请求地址：http://127.0.0.1:8005/mysql_demo/show_databases
 
 请求body：
 ```cmd
@@ -272,7 +244,7 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 请求方法：POST
 
-请求地址：http://127.0.0.1:8004/mysql_demo/show_databases
+请求地址：http://127.0.0.1:8005/mysql_demo/show_databases
 
 请求body：
 
@@ -289,4 +261,6 @@ https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html
 
 工具发表于“软件测试君”公众号，谢谢博主同学提供发布渠道。
 地址链接：https://mp.weixin.qq.com/s/lIuBsCEsgry20aLkTlQvng
+
+
 
