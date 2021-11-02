@@ -20,14 +20,15 @@ recommend: [China-Gitee](https://gitee.com/liyinchi/Omysql)，[Other-Github](htt
 ```shell
 docker pull liyinchi/omysql:latest
 ```
-![Uploading image.png…]()
+
 
 3.启动镜像容器
 
 ```shell
 docker run -d --name omysql-server -p 8005:8005 liyinchi/omysql
 ```
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/19643260/139871806-45575436-0789-40ed-89c7-84e3ad279fe7.png)
+
 
 4.访问服务接口
 
