@@ -1,2 +1,47 @@
+var express = require('express');
+var bodyParser = require('body-parser');
 
-var _0x36f7=['jsjiami.com.v6','jsTjiaDDCmi.cAom.Av6qkrPRKLh==','cGZ7wpEX','w67DvMO+CMKww4hXEiVtwro=','wqlTwro=','wpXCjWF+cMKPdzZ5LsKiFsOtw4wIw6ACw5DCsGPCt3RLVcKUw7wL','MMKbwo14QsKeIMK7wrPCtVfCpw==','YcKzYcK7X8Kt','CVHCpBlrw6nCugR2E3zDn8OdBgANcmHCuTtOC8OWw7hJwr7DoQ==','wrsPGsOeJxlawplqw6XDqg/DncKR','AsOvIcO9FMOyw4hAJsOfw7/Cpw==','wpdYXijDv2jCjFchwplSw7AnXnBqwqrCkzJqfQcOw6bDk8OnFcKsw7p2','wqpSRsODw6Jnwr3CpMOMMsKewrZCQcOpw79lV8Kpw4TDniHDjxzDoEsMdcKWMcOSRA==','w4cYbjQ=','GcKTbMO6fMKaw6rCocKew49HbMO0LXc=','wq9QwrMFPA==','woNURMOCw7Rm','w4jDs0pWFA==','XMK6EcOiKg==','wrp7DjzCqzw=','XMOtG8ObBA==','wqfCi2x/UMKIOwFjMw==','A8OyK8OsEA==','w6htwo7ChMOFwrQ=','WV3CjMKWMsOT','cFvCjsKXJMOSw6xqwoxmUg7DscO8w5HCszPDkcOfw6MnTQkqwoNxw5Uq','MAkdREM=','acORwpnCoA==','w5sPejXClXw=','QsO1YyB4','dTfDhhDCtQ==','wrjCh3FvZsKS','w6zDrkQLw7DDqMOk','wqDCmSPCkcKmXjk=','wogPBsOe'];(function(_0xb50c9f,_0x4cf5b4,_0x56ee02){var _0x94c1ef=function(_0xd38af8,_0x4b5ca1,_0x136036,_0x2d4f83){_0x4b5ca1=_0x4b5ca1>>0x8;if(_0x4b5ca1<_0xd38af8){while(--_0xd38af8){_0x2d4f83=_0xb50c9f['shift']();if(_0x4b5ca1===_0xd38af8){_0x4b5ca1=_0x2d4f83;_0x136036=_0xb50c9f['shift']();}else if(_0x136036['replace'](/[TDDCAAqkrPRKLh=]/g,'')===_0x4b5ca1){_0xb50c9f['push'](_0x2d4f83);}}_0xb50c9f['push'](_0xb50c9f['shift']());}return 0x2f737;};return _0x94c1ef(++_0x4cf5b4,_0x56ee02)>>_0x4cf5b4^_0x56ee02;}(_0x36f7,0xc7,0xc700));var _0x3865=function(_0x5b3ea9,_0x4fd5d4){_0x5b3ea9=~~'0x'['concat'](_0x5b3ea9);var _0x54ccc6=_0x36f7[_0x5b3ea9];if(_0x3865['UHFHiQ']===undefined){(function(){var _0x2d2d9d=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x43a766='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x2d2d9d['atob']||(_0x2d2d9d['atob']=function(_0x16697c){var _0x231f4a=String(_0x16697c)['replace'](/=+$/,'');for(var _0x1aef3e=0x0,_0x3f1b10,_0x319505,_0x48a6be=0x0,_0x545084='';_0x319505=_0x231f4a['charAt'](_0x48a6be++);~_0x319505&&(_0x3f1b10=_0x1aef3e%0x4?_0x3f1b10*0x40+_0x319505:_0x319505,_0x1aef3e++%0x4)?_0x545084+=String['fromCharCode'](0xff&_0x3f1b10>>(-0x2*_0x1aef3e&0x6)):0x0){_0x319505=_0x43a766['indexOf'](_0x319505);}return _0x545084;});}());var _0x58420a=function(_0x313e80,_0x4fd5d4){var _0x177f64=[],_0x56b6d1=0x0,_0x15eaea,_0xe7ec26='',_0x1e2945='';_0x313e80=atob(_0x313e80);for(var _0x2c5d1a=0x0,_0x4ae308=_0x313e80['length'];_0x2c5d1a<_0x4ae308;_0x2c5d1a++){_0x1e2945+='%'+('00'+_0x313e80['charCodeAt'](_0x2c5d1a)['toString'](0x10))['slice'](-0x2);}_0x313e80=decodeURIComponent(_0x1e2945);for(var _0x95024c=0x0;_0x95024c<0x100;_0x95024c++){_0x177f64[_0x95024c]=_0x95024c;}for(_0x95024c=0x0;_0x95024c<0x100;_0x95024c++){_0x56b6d1=(_0x56b6d1+_0x177f64[_0x95024c]+_0x4fd5d4['charCodeAt'](_0x95024c%_0x4fd5d4['length']))%0x100;_0x15eaea=_0x177f64[_0x95024c];_0x177f64[_0x95024c]=_0x177f64[_0x56b6d1];_0x177f64[_0x56b6d1]=_0x15eaea;}_0x95024c=0x0;_0x56b6d1=0x0;for(var _0x58b1b1=0x0;_0x58b1b1<_0x313e80['length'];_0x58b1b1++){_0x95024c=(_0x95024c+0x1)%0x100;_0x56b6d1=(_0x56b6d1+_0x177f64[_0x95024c])%0x100;_0x15eaea=_0x177f64[_0x95024c];_0x177f64[_0x95024c]=_0x177f64[_0x56b6d1];_0x177f64[_0x56b6d1]=_0x15eaea;_0xe7ec26+=String['fromCharCode'](_0x313e80['charCodeAt'](_0x58b1b1)^_0x177f64[(_0x177f64[_0x95024c]+_0x177f64[_0x56b6d1])%0x100]);}return _0xe7ec26;};_0x3865['GDqsAe']=_0x58420a;_0x3865['EtdlvG']={};_0x3865['UHFHiQ']=!![];}var _0x3ae2b5=_0x3865['EtdlvG'][_0x5b3ea9];if(_0x3ae2b5===undefined){if(_0x3865['ZaliPv']===undefined){_0x3865['ZaliPv']=!![];}_0x54ccc6=_0x3865['GDqsAe'](_0x54ccc6,_0x4fd5d4);_0x3865['EtdlvG'][_0x5b3ea9]=_0x54ccc6;}else{_0x54ccc6=_0x3ae2b5;}return _0x54ccc6;};var express=require('express');var bodyParser=require(_0x3865('0','(hM4'));var app=express();var urlencodedParser=bodyParser['urlencoded']({'extended':!![]});var mysql_demo=require(__dirname+'/mysql_demo.js');app['use']('/mysql_demo',mysql_demo);app[_0x3865('1','l$dq')](bodyParser['json']());app['all']('*',function(_0x2b7822,_0x3b02f9,_0x577e25){var _0x40b27d={'RadLH':_0x3865('2','9lWD'),'rUMde':function(_0x1f1eee,_0x16729a){return _0x1f1eee==_0x16729a;},'wYDzK':'OPTIONS','Brdea':function(_0x5a9c86){return _0x5a9c86();},'GzGBJ':_0x3865('3','N]UD'),'fwHce':_0x3865('4','o4q&'),'aofji':_0x3865('5',']!kG'),'QSpxs':_0x3865('6','Ht%U'),'qMXjk':_0x3865('7','o4q&'),'lOIBe':_0x3865('8','0e6Y'),'lyZuZ':_0x3865('9','jxEs'),'XVOvT':_0x3865('a','!e*D')};var _0x47a066=_0x3865('b','2YMH')[_0x3865('c','l$dq')]('|'),_0x3cbf86=0x0;while(!![]){switch(_0x47a066[_0x3cbf86++]){case'0':_0x3b02f9[_0x3865('d','jxEs')](_0x40b27d[_0x3865('e','uWwe')],'*');continue;case'1':if(_0x40b27d[_0x3865('f','2YMH')](_0x2b7822[_0x3865('10','H]Ve')],_0x40b27d[_0x3865('11','NoAA')])){_0x3b02f9[_0x3865('12','9lWD')](0xc8);}else{_0x40b27d[_0x3865('13','o4q&')](_0x577e25);}continue;case'2':_0x3b02f9[_0x3865('14','DVsS')](_0x40b27d['GzGBJ'],_0x40b27d['fwHce']);continue;case'3':_0x3b02f9[_0x3865('15','4N#p')](_0x3865('16','4N#p'),'Content-Type,Content-Length,Authorization,Accept,X-Requested-With');continue;case'4':_0x3b02f9['header']('Access-Control-Allow-Methods',_0x40b27d[_0x3865('17','85BK')]);continue;case'5':_0x3b02f9['header'](_0x40b27d['QSpxs'],_0x3865('18','H59y'));continue;case'6':_0x3b02f9[_0x3865('19','!e*D')](_0x40b27d[_0x3865('1a','4NVz')],_0x40b27d['lOIBe']);continue;case'7':_0x3b02f9['header'](_0x40b27d['lyZuZ'],_0x40b27d[_0x3865('1b','dsAV')]);continue;}break;}});var server=app[_0x3865('1c','9lWD')](0x1f45,function(){var _0x5a17bb={'mHpbU':'应用实例，访问地址为\x20http://%s:%s'};var _0x2f68cd=server['address']()[_0x3865('1d','2977')];var _0x7fa87e=server[_0x3865('1e','P#fH')]()[_0x3865('1f','Ht%U')];console['log'](_0x5a17bb[_0x3865('20','L77(')],_0x2f68cd,_0x7fa87e);});
+
+// 实例化一个express的对象app
+var app = express();
+// 创建 application/x-www-form-urlencoded 编码解析
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+
+// 引入模块化的中间件
+var mysql_demo = require(__dirname + "/mysql_demo.js");
+// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）
+app.use("/mysql_demo", mysql_demo);
+
+// 为了解析 application/json
+app.use(bodyParser.json());
+
+// 跨域设置，对所有http请求均有效
+// 自定义跨域中间件
+app.all("*", function (req, res, next) {
+  //响应头
+  res.header("Access-Control-Allow-Credentials", 'true');
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length,Authorization,Accept,X-Requested-With');
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+  res.header("Content-Length", "2000");
+  res.header("X-Powered-By", ' 3.2.1');
+  //  res.header("Content-Type", "application/x-www-form-urlencoded");
+  res.header("Content-Type", "application/json;charset=utf-8");
+  //控制权交给下一个处理程序
+  if (req.method == 'OPTIONS') {
+    //让options请求快速返回
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
+
+
+//监听端口
+var server = app.listen(8005, function () {
+  var host = server.address().address
+  var port = server.address().port
+  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
